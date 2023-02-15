@@ -74,7 +74,7 @@ const server = http.createServer((req, res) => {
     // Get all the artists
     if (req.method === 'GET' && req.url === "/artists") {
       res.statusCode = 200;
-      res.setHeader("Content-Type", "/json");
+      res.setHeader("Content-Type", "application/json");
       res.body = artists;
       res.body = JSON.stringify(res.body)
       res.write(res.body)
