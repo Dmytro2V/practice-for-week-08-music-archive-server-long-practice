@@ -78,8 +78,8 @@ const server = http.createServer((req, res) => {
       res.body = artists;
       res.body = JSON.stringify(res.body)
       res.write(res.body)
-      res.end();
-      return;
+      return res.end();
+      
     }
     // Get a specific artist's details based on artistId
     if (req.method === 'GET' && req.url.startsWith("/artists/") && urlParts.length === 3) {
